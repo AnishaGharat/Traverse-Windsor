@@ -101,19 +101,7 @@ const Trending_Places = () => {
   </Card>
   </ScrollView>
   </View>
-    
-    //     <View style={styles.topNavigation}>
-    //   <Text style={styles.written}>Trending Places</Text>
-    //   </View>
-    //   <TouchableHighlight onPress={() => console.log("Image pressed")}>
-    //   <Image onPress={() => alert('Welcome to University of Windsor')} source={
-    //     require('../assets/universitywindsor.jpeg')}/>
-    //     </TouchableHighlight>
-    //   <Button
-    //     title="Learn More"
-    //     color="blue"
-    //     accessibilityLabel="Learn more about this purple button"
-    //   />
+ 
   );
 }
 
@@ -154,16 +142,4 @@ const styles = StyleSheet.create({
 
 export default Trending_Places;
 
-// export default function App(){
-//   const theme = {
-//     ...DefaultTheme,
-//     colors: {
-//       ...DefaultTheme.colors,
-//       primary: '#0097a7',
-//     },
-//   };
-//   return(
-//     <PaperProvider theme={theme}>
-//       <Trending_Places/>
-//     </PaperProvider>
-//   );
+
