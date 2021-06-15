@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Card, Appbar, Title, Paragraph, Button, Avatar, Provider as PaperProvider, DefaultTheme} from 'react-native-paper';
+import { Card, Appbar, Title, Paragraph, Button, IconButton, Colors} from 'react-native-paper';
 import { StyleSheet, Text, TouchableHighlight, View,SafeAreaView, Alert, Image, padding, Platform, FlatList, ScrollView} from 'react-native';
-
+import { color } from 'jimp';
 
 const Trending_Places = () => {
         const _goBack = () => console.log('Went back');
@@ -25,8 +25,12 @@ const Trending_Places = () => {
     </Card.Content>
     <Card.Cover source={require('../assets/universitywindsor.jpeg')} />
     <Card.Actions>
-    <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> 
-    <Paragraph style={styles.para}>56 check-ins</Paragraph>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>81 likes</Paragraph>
+    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
+    <Card.Content>
+    <Paragraph>56 check-ins</Paragraph>
+    </Card.Content>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
@@ -35,8 +39,12 @@ const Trending_Places = () => {
     </Card.Content>
     <Card.Cover source={require('../assets/riverfront.jpg')} />
     <Card.Actions>
-    <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> 
-    <Paragraph style={styles.para}>52 check-ins</Paragraph>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>74 likes</Paragraph>
+    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
+    <Card.Content>
+    <Paragraph>52 check-ins</Paragraph>
+    </Card.Content>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
@@ -45,8 +53,12 @@ const Trending_Places = () => {
     </Card.Content>
     <Card.Cover source={require('../assets/caesors.jpg')} />
     <Card.Actions>
-    <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> 
-    <Paragraph style={styles.para}>46 check-ins</Paragraph>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>65 likes</Paragraph>
+    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
+    <Card.Content>
+    <Paragraph>46 check-ins</Paragraph>
+    </Card.Content>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
@@ -55,8 +67,12 @@ const Trending_Places = () => {
     </Card.Content>
     <Card.Cover source={require('../assets/walkerville.jpg')} />
     <Card.Actions>
-    <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> 
-    <Paragraph style={styles.para}>40 check-ins</Paragraph>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>59 likes</Paragraph>
+    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
+    <Card.Content>
+    <Paragraph>40 check-ins</Paragraph>
+    </Card.Content>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
@@ -65,8 +81,12 @@ const Trending_Places = () => {
     </Card.Content>
     <Card.Cover source={require('../assets/devonshire.jpg')} />
     <Card.Actions>
-    <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> 
-    <Paragraph style={styles.para}>36 check-ins</Paragraph>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>48 likes</Paragraph>
+    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
+    <Card.Content>
+    <Paragraph>36 check-ins</Paragraph>
+    </Card.Content>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
@@ -75,8 +95,12 @@ const Trending_Places = () => {
     </Card.Content>
     <Card.Cover source={require('../assets/brewery.jpg')} />
     <Card.Actions>
-    <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> 
-    <Paragraph style={styles.para}>34 check-ins</Paragraph>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>36 likes</Paragraph>
+    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
+    <Card.Content>
+    <Paragraph>34 check-ins</Paragraph>
+    </Card.Content>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
@@ -85,8 +109,12 @@ const Trending_Places = () => {
     </Card.Content>
     <Card.Cover source={require('../assets/jackson.jpg')} />
     <Card.Actions>
-    <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> 
-    <Paragraph style={styles.para}>32 check-ins</Paragraph>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>25 likes</Paragraph>
+    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
+    <Card.Content>
+    <Paragraph>21 check-ins</Paragraph>
+    </Card.Content>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
@@ -95,8 +123,12 @@ const Trending_Places = () => {
     </Card.Content>
     <Card.Cover source={require('../assets/artgallery.jpg')} />
     <Card.Actions>
-    <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> 
-    <Paragraph style={styles.para}>29 check-ins</Paragraph>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>19 likes</Paragraph>
+    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
+    <Card.Content>
+    <Paragraph>20 check-ins</Paragraph>
+    </Card.Content>
     </Card.Actions>
   </Card>
   </ScrollView>
@@ -106,14 +138,14 @@ const Trending_Places = () => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    // flex: 1,
-    backgroundColor: '#b7dfdb',
-    alignItems: 'center',
-    //justifyContent: 'center',
-    resizeMode: 'contain',
-    paddingTop: Platform.OS === "android" ? 32 : 0
-  },
+  // container: {
+  //   // flex: 1,
+  //   backgroundColor: '#b7dfdb',
+  //   alignItems: 'center',
+  //   //justifyContent: 'center',
+  //   resizeMode: 'contain',
+  //   paddingTop: Platform.OS === "android" ? 32 : 0
+  // },
   written:
   {
     color: '#fff',
@@ -131,13 +163,14 @@ const styles = StyleSheet.create({
   },
   button:
   {
-    backgroundColor: '#78a834',
+    color: 'red',
+    //backgroundColor: '#78a834',
   },
   para:
   {
     textAlign:'right',
   }
-  
+  //Add comment
 });
 
 export default Trending_Places;
