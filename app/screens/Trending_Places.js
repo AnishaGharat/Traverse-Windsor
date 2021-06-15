@@ -3,7 +3,7 @@ import React from 'react';
 import { Card, Appbar, Title, Paragraph, Button, IconButton, Colors} from 'react-native-paper';
 import { StyleSheet, Text, TouchableHighlight, View,SafeAreaView, Alert, Image, padding, Platform, FlatList, ScrollView} from 'react-native';
 import { color } from 'jimp';
-import TrendingPlace from '../components/TrendingPlace.js'
+import Cards from '../components/TrendingPlaces-Cards.js'
 
 const trendingPlaces=[
   {
@@ -14,10 +14,11 @@ const trendingPlaces=[
     type:'School'
   },
   {
-    title:'Old Walkerville Neighborhood',
-    imgSrc:require('../assets/walkerville.jpg'),
+    title:'Windsor Riverfront',
+    imgSrc:require('../assets/riverfront.jpg'),
     numLikes:14,
-    numCheckins:15
+    numCheckins:15,
+    type: 'Parks',
   },
   {
     title:'Caesars Windsor',
@@ -30,31 +31,36 @@ const trendingPlaces=[
     title:'Old Walkerville Neighborhood',
     imgSrc:require('../assets/walkerville.jpg'),
     numLikes:34,
-    numCheckins:25
+    numCheckins:25,
+    type:'Attractions',
   },
   {
     title:'Devonshire Mall',
     imgSrc:require('../assets/devonshire.jpg'),
     numLikes:64,
-    numCheckins:55
+    numCheckins:55,
+    type:'Shopping'
   },
   {
     title:'Walkerville Brewery',
     imgSrc:require('../assets/brewery.jpg'),
     numLikes:54,
-    numCheckins:65
+    numCheckins:65,
+    type: 'Restaurants'
   },
   {
     title:'Jackson Park',
     imgSrc:require('../assets/jackson.jpg'),
     numLikes:26,
-    numCheckins:47
+    numCheckins:47,
+    type:'Parks'
   },
   {
     title:'Art Gallery Of Windsor',
     imgSrc:require('../assets/artgallery.jpg'),
     numLikes:36,
-    numCheckins:34
+    numCheckins:34,
+    type:'Attractions'
   }
 ]
 
@@ -74,7 +80,7 @@ const Trending_Places = () => {
     </Appbar.Header>
   <ScrollView>
   {trendingPlaces.map(place =>(
-    <TrendingPlace title={place.title} imgSrc={place.imgSrc} numLikes={place.numLikes} numCheckins={place.numCheckins}/>
+    <Cards title={place.title} imgSrc={place.imgSrc} numLikes={place.numLikes} numCheckins={place.numCheckins}/>
   )) } 
   </ScrollView>
   </View> 
@@ -115,7 +121,6 @@ const styles = StyleSheet.create({
   {
     textAlign:'right',
   }
-  //Add comment
 });
 
 export default Trending_Places;

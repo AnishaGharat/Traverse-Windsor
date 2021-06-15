@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Title, Paragraph, IconButton, Colors } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 
-export default class TrendingPlace extends React.Component {
+export default class Cards extends React.Component {
     render() {
         const { title, imgSrc, numLikes, numCheckins }= this.props
         return <Card style={{ margin: 10 }}>
@@ -22,14 +22,6 @@ export default class TrendingPlace extends React.Component {
     }
 }
 const styles = StyleSheet.create({
-    // container: {
-    //   // flex: 1,
-    //   backgroundColor: '#b7dfdb',
-    //   alignItems: 'center',
-    //   //justifyContent: 'center',
-    //   resizeMode: 'contain',
-    //   paddingTop: Platform.OS === "android" ? 32 : 0
-    // },
     written:
     {
         color: '#fff',
@@ -54,5 +46,4 @@ const styles = StyleSheet.create({
     {
         textAlign: 'right',
     }
-    //Add comment
 });
