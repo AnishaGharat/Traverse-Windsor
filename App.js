@@ -11,10 +11,11 @@ import {
 } from 'react-native';
 import { BottomNavigation,  Button, Snackbar, FAB, Portal, Provider,  DefaultTheme,  } from 'react-native-paper';
 import Camera from './screens/Camera';
+import Map from './screens/Map';
 import Trending_Places from './screens/Trending_Places';
 import {SafeAreaView} from 'react-native';
 
-const HomeRoute = () => 
+const HomeRoute = () =>
   <View style={styles.appContainer}>
   <View style ={styles.buttonView}>
   <Button color='#78a834' mode="contained"  onPress={() => console.log('Pressed')}>
@@ -22,16 +23,16 @@ const HomeRoute = () =>
   </Button>
   <Button  align='center' icon='help' color='#78a834' mode='contained'  onPress={() => console.log('Pressed')}>
   Help
-  </Button> 
+  </Button>
   </View>
 <View style={styles.sectionContainer}>
   <Text style={styles.sectionTitle}>
-    Traverse 
+    Traverse
   </Text>
   <Text style={styles.sectionTitle}>
     Windsor
   </Text>
-  <Image 
+  <Image
 style={{width: 350, height: 350}}
 source={require('./assets/logo_gif.gif')} />
 </View>
@@ -40,11 +41,17 @@ source={require('./assets/logo_gif.gif')} />
 const ExploreWindsorRoute = () =>{
 return(<><Camera/></>);};
 
+const MapsRoute = () => {
+  return(
+    <Map/>
+  );
+};
+
 const TrendingPlaceRoute = () => {
 return(<><Trending_Places/></>);};
 
 const EventsRoute = () => {
-  
+
   const [state, setState] = React.useState({ open: false });
 
   const onStateChange = ({ open }) => setState({ open });
@@ -69,8 +76,8 @@ const EventsRoute = () => {
             open={open}
             icon={open ? 'close' : 'plus'}
             actions={[
-              { 
-              icon: 'plus', 
+              {
+              icon: 'plus',
               label: 'Add New',
               onPress: () => console.log('Pressed add new') },
               {
@@ -97,6 +104,7 @@ const App = () => {
     { key: 'explore', title: 'Explore Windsor', icon: 'camera'},
     { key: 'trends', title: 'Trending Places', icon: 'map'},
     { key: 'events', title: 'Events', icon: 'calendar'},
+    { key: 'map', title: 'Map', icon: 'map'},
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
@@ -104,19 +112,20 @@ const App = () => {
     explore: ExploreWindsorRoute,
     trends: TrendingPlaceRoute,
     events: EventsRoute,
+    map: MapsRoute,
   });
 
   return (
-   
-          <BottomNavigation barStyle={{ backgroundColor: '#b7dfdb'}} 
+
+          <BottomNavigation barStyle={{ backgroundColor: '#b7dfdb'}}
           navigationState={{ index, routes }}
           inactiveColor = '#9aa6b7'
           activeColor = '#71797E'
           onIndexChange={setIndex}
           renderScene={renderScene}
           />
-          
-         
+
+
   );
 };
 
