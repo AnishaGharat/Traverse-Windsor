@@ -1,7 +1,18 @@
-var express = require('express')
-var app = express()
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+} from 'react-router-dom';
+import EventsPage from './src/pages/EventsPage';
 
 
-app.get('/fetch_trending_places', function (req, res) {
-  res.send('hello world')
-})
+class App extends Component {
+
+  render() {
+    return  (
+      <div className="App">
+        <EventsPage/>
+      </div>
+    );
+  }
+}
