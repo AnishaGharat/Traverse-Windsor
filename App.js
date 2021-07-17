@@ -13,6 +13,7 @@ import { BottomNavigation,  Button, Snackbar, FAB, Portal, Provider,  DefaultThe
 import Camera from './screens/Camera';
 import Map from './screens/Map';
 import Trending_Places from './screens/Trending_Places';
+import ArMap from './screens/Ar_map';
 import {SafeAreaView} from 'react-native';
 
 const HomeRoute = () =>
@@ -43,7 +44,7 @@ return(<><Camera/></>);};
 
 const MapsRoute = () => {
   return(
-    <Map/>
+    <ArMap/>
   );
 };
 

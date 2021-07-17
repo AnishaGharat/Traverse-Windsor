@@ -10,12 +10,17 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/geolocation": "^2.0.2",
     "@react-native-mapbox-gl/maps": "^8.2.0-beta2",
+    "create-react-class": "^15.7.0",
     "react": "17.0.1",
     "react-native": "0.64.2",
     "react-native-camera": "^3.44.1",
+    "react-native-compass-heading": "^1.2.1",
     "react-native-paper": "^4.9.1",
-    "react-native-vector-icons": "^8.1.0"
+    "react-native-permissions": "^3.0.3",
+    "react-native-vector-icons": "^8.1.0",
+    "react-viro": "2.17.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
