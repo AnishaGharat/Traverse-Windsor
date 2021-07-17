@@ -11,13 +11,13 @@ app.get('/', function (req, res) {
 })
 
 app.get('/fetch_trending_places', (req, res) => {
-   data = database.scanItems(req.body.table_name);
-   // data = { "event_id":"abcdg "}
-   // res.sendStatus(200);
-   // res.send(data);
-   return res
-   .status(200)
-   .json({ data });
+   database.scanItems(req.body.table_name).then( data => {
+
+      console.log(data);
+      return res
+      .status(200)
+      .json({ data });
+   });
 });
 
 app.get('/update_trending_places', function(req, res){

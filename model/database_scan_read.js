@@ -26,15 +26,15 @@ function scanItems(tableName)
 
             console.log("Reading Item");
 
-            dynamodb_client.scan(params, function(err, data) {
+            data = dynamodb_client.scan(params, function(err, data) {
                 if (err) {
                     console.error("Unable to read item. Error JSON:", JSON.stringify(err, null, 2));
                     reject(err);
                 } else {
                     console.log("Item fetched", JSON.stringify(data, null, 2));
-                    return {
-                        "scanned_response":data
-                    }
+                    resolve ({
+                        "scanned_response": data
+                    })
 
                 }
             });
