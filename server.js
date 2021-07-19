@@ -1,8 +1,10 @@
 const { json } = require('express');
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 app.use(express.json());
+// app.use(bodyParser.urlencoded({ extended: false }))
 
 const database = require("./model/database_scan_read");
 
@@ -11,13 +13,39 @@ app.get('/', function (req, res) {
 })
 
 app.get('/fetch_trending_places', (req, res) => {
-   database.scanItems(req.body.table_name).then( data => {
-
-      console.log(data);
-      return res
+   const data = 
+   {
+    "data": {
+    "scanned_response": {
+    "Items": [
+    {
+    "check_in": 60,
+    "place_name": "Riverfront",
+    "likes": 15,
+    "place_id": "56sfyagsa78w"
+    },
+    {
+    "check_in": 15,
+    "place_name": "Peace Fountain",
+    "likes": 30,
+    "place_id": "56sfyausdsa78w"
+    },
+    {
+    "check_in": 49,
+    "place_name": "Caesor's",
+    "likes": 45,
+    "place_id": "56sfyagsa7s7"
+    }
+    ],
+    "Count": 3,
+    "ScannedCount": 3
+    }
+    }
+   }
+   return res
       .status(200)
-      .json({ data });
-   });
+      .send( data );
+ 
 });
 
 app.get('/update_trending_places', function(req, res){
@@ -28,7 +56,7 @@ app.get('/update_trending_places', function(req, res){
 
 })
 
-var server = app.listen(8081, function () {
+var server = app.listen(8080, function () {
    var host = server.address().address
    var port = server.address().port
 
