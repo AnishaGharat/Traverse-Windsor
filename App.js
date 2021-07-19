@@ -13,6 +13,7 @@ import { BottomNavigation,  Button, Snackbar, FAB, Portal, Provider,  DefaultThe
 import Camera from './screens/Camera';
 import Map from './screens/Map';
 import Trending_Places from './screens/Trending_Places';
+import Events_Page from './screens/Events_Page';
 import {SafeAreaView} from 'react-native';
 
 const HomeRoute = () =>
@@ -51,51 +52,52 @@ const TrendingPlaceRoute = () => {
 return(<><Trending_Places/></>);};
 
 const EventsRoute = () => {
+return(<><Events_Page/></>);};
 
-  const [state, setState] = React.useState({ open: false });
+//   const [state, setState] = React.useState({ open: false });
 
-  const onStateChange = ({ open }) => setState({ open });
+//   const onStateChange = ({ open }) => setState({ open });
 
-  const theme = {
-    ...DefaultTheme,
-    myOwnProperty: true,
-    colors: {
-    ...DefaultTheme.colors,
-    primary: '#0097a7',
-    accent: '#71797E',
-    backdrop: '#E5E4E2',
-    background: '#E5E4E2',
-    }
-  };
+//   const theme = {
+//     ...DefaultTheme,
+//     myOwnProperty: true,
+//     colors: {
+//     ...DefaultTheme.colors,
+//     primary: '#0097a7',
+//     accent: '#71797E',
+//     backdrop: '#E5E4E2',
+//     background: '#E5E4E2',
+//     }
+//   };
 
-  const { open } = state;
-  return(
-    <Provider theme ={theme} >
-      <Portal theme ={theme} >
-          <FAB.Group
-            open={open}
-            icon={open ? 'close' : 'plus'}
-            actions={[
-              {
-              icon: 'plus',
-              label: 'Add New',
-              onPress: () => console.log('Pressed add new') },
-              {
-                icon: 'calendar-today',
-                label: 'View All',
-                onPress: () => console.log('Pressed all events'),
-              },
-            ]}
-            onStateChange={onStateChange}
-            onPress={() => {
-              if (open) {
-              }
-            }}
-          />
-          </Portal>
-    </Provider>
-  );
-};
+//   const { open } = state;
+//   return(
+//     <Provider theme ={theme} >
+//       <Portal theme ={theme} >
+//           <FAB.Group
+//             open={open}
+//             icon={open ? 'close' : 'plus'}
+//             actions={[
+//               {
+//               icon: 'plus',
+//               label: 'Add New',
+//               onPress: () => console.log('Pressed add new') },
+//               {
+//                 icon: 'calendar-today',
+//                 label: 'View All',
+//                 onPress: () => console.log('Pressed all events'),
+//               },
+//             ]}
+//             onStateChange={onStateChange}
+//             onPress={() => {
+//               if (open) {
+//               }
+//             }}
+//           />
+//           </Portal>
+//     </Provider>
+//   );
+// };
 
 const App = () => {
   const [index, setIndex] = React.useState(0);
