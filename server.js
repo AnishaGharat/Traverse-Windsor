@@ -1,8 +1,10 @@
 const { json, request } = require('express');
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 app.use(express.json());
+// app.use(bodyParser.urlencoded({ extended: false }))
 
 const database_fetch = require("./model/database_scan_read");
 const database_update = require("./model/database_update");
@@ -18,8 +20,8 @@ app.get('/fetch_trending_places', (req, res) => {
       console.log(data);
       return res
       .status(200)
-      .json({ data });
-   });
+      .send( data );
+ 
 });
 
 // Update check-ins in the "Trending Places Page"
@@ -44,17 +46,8 @@ app.get('/update_likes_trending_places', (req, res) => {
    });
 });
 
-app.get('/update_trending_places', function(req, res){
-   console.log(req);
-   events_data = database.readItems(req.item, req.table_name);
-   res.send(events_data);
-   res.status(401).json({ error: 'Unauthorized' })
 
-})
-
-
-
-var server = app.listen(8081, function () {
+var server = app.listen(8080, function () {
    var host = server.address().address
    var port = server.address().port
 
