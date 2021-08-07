@@ -20,104 +20,87 @@ const Events_Page = () => {
     </Appbar.Header>
   <ScrollView>
   <Card style={{margin:10}}>
-    <Card.Content>
-      <Title>University Of Windsor</Title>
-    </Card.Content>
-    <Card.Cover source={require('../assets/universitywindsor.jpeg')} />
+  <Card.Actions>
+  <Title>Holi Festival</Title>
+  <Title>{" - "}</Title>
+  <Title>29th July 2021</Title>
+  </Card.Actions>
+  <Paragraph style={styles.para}>Enjoy festival of colours!!</Paragraph>
+    <Card.Cover source={require('../assets/holi.jpg')} />
     <Card.Actions>
-    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
-    <Paragraph style={styles.para}>81 likes</Paragraph>
+    <IconButton icon="calendar" color={Colors.grey900} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>98 going</Paragraph>
     {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
     <Card.Content>
-    <Paragraph>56 check-ins</Paragraph>
+    {/* <Paragraph>56 check-ins</Paragraph> */}
     </Card.Content>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>51 likes</Paragraph>
+    <Button icon="send" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>RSVP</Button>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
-    <Card.Content>
-      <Title>Windsor Riverfront</Title>
-    </Card.Content>
-    <Card.Cover source={require('../assets/riverfront.jpg')} />
+  <Card.Actions>
+  <Title>Music Festival</Title>
+  <Title>{" - "}</Title>
+  <Title>25th August 2021</Title>
+  </Card.Actions>
+  <Paragraph style={styles.para}>Dance to the tunes of heaven!!</Paragraph>
+    <Card.Cover source={require('../assets/music.jpg')} />
     <Card.Actions>
-    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
-    <Paragraph style={styles.para}>74 likes</Paragraph>
+    <IconButton icon="calendar" color={Colors.grey900} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>34 going</Paragraph>
     {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
     <Card.Content>
-    <Paragraph>52 check-ins</Paragraph>
+    {/* <Paragraph>56 check-ins</Paragraph> */}
     </Card.Content>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>14 likes</Paragraph>
+    <Button icon="send" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>RSVP</Button>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
-    <Card.Content>
-      <Title>Caesars Windsor</Title>
-    </Card.Content>
-    <Card.Cover source={require('../assets/caesors.jpg')} />
+  <Card.Actions>
+  <Title>Halloween Party</Title>
+  <Title>{" - "}</Title>
+  <Title>31st October 2021</Title>
+  </Card.Actions>
+  <Paragraph style={styles.para}>Figure out your spooky side!!</Paragraph>
+    <Card.Cover source={require('../assets/halloween.jpg')} />
     <Card.Actions>
-    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
-    <Paragraph style={styles.para}>65 likes</Paragraph>
+    <IconButton icon="calendar" color={Colors.grey900} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>43 going</Paragraph>
     {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
     <Card.Content>
-    <Paragraph>46 check-ins</Paragraph>
+    {/* <Paragraph>56 check-ins</Paragraph> */}
     </Card.Content>
+    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>42 likes</Paragraph>
+    <Button icon="send" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>RSVP</Button>
     </Card.Actions>
   </Card>
   <Card style={{margin:10}}>
-    <Card.Content>
-      <Title>Old Walkerville Neighborhood</Title>
-    </Card.Content>
-    <Card.Cover source={require('../assets/walkerville.jpg')} />
+  <Card.Actions>
+  <Title>Christmas Party</Title>
+  <Title>{" - "}</Title>
+  <Title>25th December 2021</Title>
+  </Card.Actions>
+  <Paragraph style={styles.para}>Perfect spot for Holiday Party!!</Paragraph>
+    <Card.Cover source={require('../assets/christmas.jpg')} />
     <Card.Actions>
-    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
-    <Paragraph style={styles.para}>59 likes</Paragraph>
+    <IconButton icon="calendar" color={Colors.grey900} size={20} onPress={() => console.log('Pressed') } />
+    <Paragraph style={styles.para}>61 going</Paragraph>
     {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
     <Card.Content>
-    <Paragraph>40 check-ins</Paragraph>
+    {/* <Paragraph>56 check-ins</Paragraph> */}
     </Card.Content>
-    </Card.Actions>
-  </Card>
-  <Card style={{margin:10}}>
-    <Card.Content>
-      <Title>Devonshire Mall</Title>
-    </Card.Content>
-    <Card.Cover source={require('../assets/devonshire.jpg')} />
-    <Card.Actions>
     <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
-    <Paragraph style={styles.para}>48 likes</Paragraph>
-    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
-    <Card.Content>
-    <Paragraph>36 check-ins</Paragraph>
-    </Card.Content>
+    <Paragraph style={styles.para}>38 likes</Paragraph>
+    <Button icon="send" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>RSVP</Button>
     </Card.Actions>
   </Card>
-  <Card style={{margin:10}}>
-    <Card.Content>
-      <Title>Walkerville Brewery</Title>
-    </Card.Content>
-    <Card.Cover source={require('../assets/brewery.jpg')} />
-    <Card.Actions>
-    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
-    <Paragraph style={styles.para}>36 likes</Paragraph>
-    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
-    <Card.Content>
-    <Paragraph>34 check-ins</Paragraph>
-    </Card.Content>
-    </Card.Actions>
-  </Card>
-  <Card style={{margin:10}}>
-    <Card.Content>
-      <Title>Jackson Park</Title>
-    </Card.Content>
-    <Card.Cover source={require('../assets/jackson.jpg')} />
-    <Card.Actions>
-    <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
-    <Paragraph style={styles.para}>25 likes</Paragraph>
-    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
-    <Card.Content>
-    <Paragraph>21 check-ins</Paragraph>
-    </Card.Content>
-    </Card.Actions>
-  </Card>
-  <Card style={{margin:10}}>
+
+  {/* <Card style={{margin:10}}>
     <Card.Content>
       <Title>Art Gallery Of Windsor</Title>
     </Card.Content>
@@ -125,12 +108,12 @@ const Events_Page = () => {
     <Card.Actions>
     <IconButton icon="heart" color={Colors.red500} size={20} onPress={() => console.log('Pressed') } />
     <Paragraph style={styles.para}>19 likes</Paragraph>
-    {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
+    <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button>
     <Card.Content>
     <Paragraph>20 check-ins</Paragraph>
     </Card.Content>
     </Card.Actions>
-  </Card>
+  </Card> */}
   </ScrollView>
   </View>
  
@@ -164,11 +147,13 @@ const styles = StyleSheet.create({
   button:
   {
     color: 'red',
-    //backgroundColor: '#78a834',
+    backgroundColor: '#5c8b2b',
   },
   para:
   {
-    textAlign:'right',
+    // textAlign:'right',
+    paddingLeft: 10,
+    paddingRight: 10,
   }
   //Add comment
 });

@@ -22,7 +22,7 @@ const Trending_Places = () => {
 
   useEffect(() => {
     let mounted = true;
-    fetch('http://10.0.2.2:8080/fetch_trending_places', {
+    fetch('http://192.168.2.12:8080/fetch_trending_places', {
       method: 'GET',
       headers: {
         Accept: 'application/json',
@@ -65,7 +65,7 @@ const Trending_Places = () => {
                 <Title>{el.place_name}</Title>
               </Card.Content>
               <Card.Cover
-                source={require('../assets/universitywindsor.jpeg')}
+                source={{uri:el.image_url}}
               />
               <Card.Actions>
                 <IconButton
