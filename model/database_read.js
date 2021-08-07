@@ -16,7 +16,7 @@ readItems(event.event_id, tableName)
         console.error('Read failed', err);
     });
 
-function readItems(item, tableName)
+function readItems(key, tableName)
 {
     return new Promise((resolve, reject) => {
 
@@ -25,7 +25,7 @@ function readItems(item, tableName)
             var params = {
                 TableName:tableName,
                 Key:{
-                    "place_id": item
+                    "place_id": key
                 }
             };
 
