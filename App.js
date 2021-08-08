@@ -10,10 +10,11 @@ import {
   View,
 } from 'react-native';
 import { BottomNavigation,  Button, Snackbar, FAB, Portal, Provider,  DefaultTheme,  } from 'react-native-paper';
-import Camera from './screens/Camera';
+// import Camera from './screens/Camera';
 import Map from './screens/Map';
 import Trending_Places from './screens/Trending_Places';
 import {SafeAreaView} from 'react-native';
+import ArMap from './screens/Ar_map';
 
 const HomeRoute = () =>
   <View style={styles.appContainer}>
@@ -39,7 +40,8 @@ source={require('./assets/logo_gif.gif')} />
 </View>;
 
 const ExploreWindsorRoute = () =>{
-return(<><Camera/></>);};
+  console.log("Abc");
+return(<><ArMap/></>);};
 
 const MapsRoute = () => {
   return(

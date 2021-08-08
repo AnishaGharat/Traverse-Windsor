@@ -14,7 +14,7 @@ import {
   View,
   ScrollView,
 } from 'react-native';
-import {color} from 'jimp';
+// import {color} from 'jimp';
 
 const Trending_Places = () => {
   const [isLoading, setLoading] = useState(true);
