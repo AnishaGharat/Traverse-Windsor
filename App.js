@@ -12,7 +12,7 @@ import {
 import { BottomNavigation,  Button, Snackbar, FAB, Portal, Provider,  DefaultTheme,  } from 'react-native-paper';
 // import Camera from './screens/Camera';
 import Map from './screens/Map';
-// import Trending_Places from './screens/Trending_Places';
+import Trending_Places from './screens/Trending_Places';
 import ArMap from './screens/Ar_map';
 import {SafeAreaView} from 'react-native';
 
@@ -102,7 +102,7 @@ const App = () => {
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     { key: 'home', title:'Home Page', icon:'home'},
-    { key: 'explore', title: 'Explore Windsor', icon: 'camera'},
+    // { key: 'explore', title: 'Explore Windsor', icon: 'camera'},
     { key: 'trends', title: 'Trending Places', icon: 'map'},
     { key: 'events', title: 'Events', icon: 'calendar'},
     { key: 'map', title: 'Map', icon: 'map'},
@@ -111,7 +111,7 @@ const App = () => {
   const renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
     // explore: ExploreWindsorRoute,
-    // trends: TrendingPlaceRoute,
+    trends: TrendingPlaceRoute,
     events: EventsRoute,
     map: MapsRoute,
   });

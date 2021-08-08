@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, Appbar, Title, Paragraph, Button, IconButton, Colors} from 'react-native-paper';
 import { StyleSheet, Text, TouchableHighlight, View,SafeAreaView, Alert, Image, padding, Platform, FlatList, ScrollView} from 'react-native';
-import { color } from 'jimp';
+// import { color } from 'jimp';
 
 const Trending_Places = () => {
         const _goBack = () => console.log('Went back');
