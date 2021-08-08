@@ -16,13 +16,17 @@ import {
 } from 'react-native';
 import {color} from 'jimp';
 
+state={
+  value=el.likes,
+}
+
 const Trending_Places = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
   useEffect(() => {
     let mounted = true;
-    fetch('http://192.168.2.12:8080/fetch_trending_places', {
+    fetch('http://10.0.2.2:8080/fetch_trending_places', {
       method: 'GET',
       headers: {
         Accept: 'application/json',
@@ -30,7 +34,8 @@ const Trending_Places = () => {
       },
     })
       .then(response => response.json())
-      .then(json => setData(json.data.scanned_response.Items)
+      .then(json => setData(json.scanned_response.Items)
+      //json.data.scanned_response.Items
       )
       .catch(error => console.error(error))
       .finally(() => {
@@ -69,11 +74,13 @@ const Trending_Places = () => {
               />
               <Card.Actions>
                 <IconButton
+                  id="like"
                   icon="heart"
                   color={Colors.red500}
                   size={20}
                   onPress={() => console.log('Pressed')}
                 />
+                {/* <Text>{el.place_id}</Text> */}
                 <Paragraph style={styles.para}>{el.likes} likes</Paragraph>
                 {/* <Button icon="car" mode="contained" onPress={() => console.log('Pressed')} style={styles.button}>DIRECTIONS</Button> */}
                 <Card.Content>
