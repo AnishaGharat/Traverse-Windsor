@@ -16,10 +16,6 @@ import {
 } from 'react-native';
 import {color} from 'jimp';
 
-state={
-  value=el.likes,
-}
-
 const Trending_Places = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
