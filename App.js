@@ -9,12 +9,15 @@ import {
   Platform,
   View,
 } from 'react-native';
+
+//used the react-native-paper library for styling according to material design principles
 import { BottomNavigation,  Button, Snackbar, FAB, Portal, Provider,  DefaultTheme,  } from 'react-native-paper';
 import Camera from './screens/Camera';
 import Map from './screens/Map';
 import Trending_Places from './screens/Trending_Places';
 import {SafeAreaView} from 'react-native';
 
+//This route leads to the main home page screen that has two buttons: help and about us
 const HomeRoute = () =>
   <View style={styles.appContainer}>
   <View style ={styles.buttonView}>
@@ -38,67 +41,28 @@ source={require('./assets/logo_gif.gif')} />
 </View>
 </View>;
 
+//When the Explore Windsor button is pressed in the bottom navigation bar, the camera.js file is called
 const ExploreWindsorRoute = () =>{
 return(<><Camera/></>);};
 
+//When maps button is clicked then the map.js file is called
 const MapsRoute = () => {
   return(
     <Map/>
   );
 };
 
+//Clicking the trending places button on bottom navigation opens redirects to Trending_Places.js file
 const TrendingPlaceRoute = () => {
 return(<><Trending_Places/></>);};
 
+//Here the Events page is rendered if the user selects the events option in bottom navigation bar
 const EventsRoute = () => {
-
-  const [state, setState] = React.useState({ open: false });
-
-  const onStateChange = ({ open }) => setState({ open });
-
-  const theme = {
-    ...DefaultTheme,
-    myOwnProperty: true,
-    colors: {
-    ...DefaultTheme.colors,
-    primary: '#0097a7',
-    accent: '#71797E',
-    backdrop: '#E5E4E2',
-    background: '#E5E4E2',
-    }
-  };
-
-  const { open } = state;
-  return(
-    <Provider theme ={theme} >
-      <Portal theme ={theme} >
-          <FAB.Group
-            open={open}
-            icon={open ? 'close' : 'plus'}
-            actions={[
-              {
-              icon: 'plus',
-              label: 'Add New',
-              onPress: () => console.log('Pressed add new') },
-              {
-                icon: 'calendar-today',
-                label: 'View All',
-                onPress: () => console.log('Pressed all events'),
-              },
-            ]}
-            onStateChange={onStateChange}
-            onPress={() => {
-              if (open) {
-              }
-            }}
-          />
-          </Portal>
-    </Provider>
-  );
-};
+  return(<><Events/></>);};
 
 const App = () => {
   const [index, setIndex] = React.useState(0);
+//Defining the routes to direct the application to relevant application screen
   const [routes] = React.useState([
     { key: 'home', title:'Home Page', icon:'home'},
     { key: 'explore', title: 'Explore Windsor', icon: 'camera'},
@@ -106,7 +70,8 @@ const App = () => {
     { key: 'events', title: 'Events', icon: 'calendar'},
     { key: 'map', title: 'Map', icon: 'map'},
   ]);
-
+    
+//Rendering the bottom navigation bar
   const renderScene = BottomNavigation.SceneMap({
     home: HomeRoute,
     explore: ExploreWindsorRoute,
