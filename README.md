@@ -1,8 +1,8 @@
 # Advanced Software Engineering Project
-# Traverse Windsor - Mobile Native Application, Augmented Reality
+# Traverse Windsor - Mobile Native Application | Augmented Reality
 
 ## Introduction
-Traverse Windsor is a cross-platform mobile application which uses Augmented Reality allowing users to locate the nearby places in the view of their mobile's cameras. The application is a one-stop-shop for all the happenings in Windsor and what places are trending at the moment. The users can also add any public events for all the residents and tourists. The users can view these events and either like or RSVP to any particular event.
+Traverse Windsor is a cross-platform mobile application which uses Augmented Reality allowing users to locate the nearby places in the view of their mobiles' cameras. The application is a one-stop-shop for all the happenings in Windsor and what places are trending at the moment. The users can also add any public events for all the residents and tourists. The users can view these events and either like or RSVP to any particular event.
 
 ### Features Used
 The functional features of the application are as follows:
@@ -23,7 +23,7 @@ The functional features of the application are as follows:
 - [Git](https://git-scm.com/downloads)
 - [Android Studio](https://developer.android.com/studio)
 - [React Native CLI](https://reactnative.dev/docs/environment-setup)
-- [Amazon Web Services](https://docs.aws.amazon.com/cli/latest/userguide/  cli-configure-quickstart.html)
+- [Amazon Web Services](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
 - [Viro React CLI](https://docs.viromedia.com/docs/quick-start)
 
 
@@ -35,10 +35,11 @@ The steps are:
  3. [Installing necessary Javascript Libraries](#step-3---installing-necessary-Javascript-Libraries)
  4. [Setting up the AWS Enironment](#step-4---setting-up-the-aws-environment)
  5. [Setting up Viro React CLI for Augmented Reality](#step-5---setting-up-viro-react-cli-for-augmented-reality)
- 6. [Running the Application](#step-6---running-the-application)
+ 6. [Additional Step](#step-6---additional-step)
+ 7. [Running the Application](#step-7---running-the-application)
 
 
-### Step 1 - Setting up Eclipse Environment
+### Step 1 - Setting up Visual Code Environment
 
 - Install the Visual Studio Code IDE for the respective OS, launch the IDE.
 - Open a terminal in the studio to excute commands.
@@ -80,12 +81,23 @@ $ aws configure
 $ npm install aws-sdk
 ```
 
-### Step 5 - Setting Viro React CLI for Augmented Reality
+### Step 5 - Setting up Viro React CLI for Augmented Reality
 
 - Set up the Viro React library for the Augmented Reality Feature for the application by using the prereqisite link for Viro React CLI.
 
-### Step 6 - Running the Application
+### Step 6 - Additional Setup
 
+- The application requires a Google Maps Places API key: Get this from the Google Cloud Platform (Even if it is a paid API, Google gives $300 credits).
+
+- After getting the key, set it on the API_KEY constant on Camera.js line 28.
+
+### Step 7 - Running the Application
+
+- Before executing the application, it is best to run the following command to remove any dependancies related issues:
+
+```
+$ npm install
+```
 - Enable the USB Debugging for Android.
 
 - Android Device > System Settings > Developer options > USB debugging.
@@ -130,12 +142,18 @@ $ adb devices
     - Run the following command to run the client
 
     ```
-    $ 
+    $ npx react-native run-android
     ``` 
     
 ## Versioning
 
 We use [GitHub](http://github.com/) for versioning. 
+
+## Final Presentation
+
+The final presentation for the release 1.0 can be viewed [here](https://www.canva.com/design/DAEmgTX0Vxc/dK4ouAphlPVlzorqX5hgWA/view?utm_content=DAEmgTX0Vxc&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton#1).
+
+Note: Access Limited
 
 ## Authors
 
