@@ -130,7 +130,7 @@ $ adb devices
     - Run the following command to run the client
 
     ```
-    $ 
+    $ npx react-native run-android
     ``` 
     
 ## Versioning
