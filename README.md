@@ -139,7 +139,7 @@ We use [GitHub](http://github.com/) for versioning.
 
 ## Final Presentation
 
-The final presentation for the release 1.0 can be viewed [here](https://www.canva.com/design/DAEmgTX0Vxc/dK4ouAphlPVlzorqX5hgWA/view?utm_content=DAEmgTX0Vxc&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton#1)
+The final presentation for the release 1.0 can be viewed [here](https://www.canva.com/design/DAEmgTX0Vxc/dK4ouAphlPVlzorqX5hgWA/view?utm_content=DAEmgTX0Vxc&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton#1).
 
 Note: Access Limited
 
