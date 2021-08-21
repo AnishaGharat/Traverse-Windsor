@@ -80,7 +80,7 @@ $ aws configure
 $ npm install aws-sdk
 ```
 
-### Step 5 - Setting Viro React CLI for Augmented Reality
+### Step 5 - Setting up Viro React CLI for Augmented Reality
 
 - Set up the Viro React library for the Augmented Reality Feature for the application by using the prereqisite link for Viro React CLI.
 
