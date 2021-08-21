@@ -12,9 +12,15 @@ The functional features of the application are as follows:
 
 ### Project Flowchart
 
+![alt text](extras/Project_Flow_Diagram.png)
+
 ### Technology Stack
 
+![alt text](https://github.com/AnishaGharat/Traverse-Windsor/blob/dev/extras/Technology_Stack.png)
+
 ### Solution Architecture
+
+![alt text](extras/Solution_Architecture.png)
 
 ### Prerequisites
 
@@ -35,7 +41,7 @@ The steps are:
  3. [Installing necessary Javascript Libraries](#step-3---installing-necessary-Javascript-Libraries)
  4. [Setting up the AWS Enironment](#step-4---setting-up-the-aws-environment)
  5. [Setting up Viro React CLI for Augmented Reality](#step-5---setting-up-viro-react-cli-for-augmented-reality)
- 6. [Additional Step](#step-6---additional-step)
+ 6. [Additional Setup](#step-6---additional-setup)
  7. [Running the Application](#step-7---running-the-application)
 
 
