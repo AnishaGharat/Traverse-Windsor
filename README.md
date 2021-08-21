@@ -2,7 +2,7 @@
 # Traverse Windsor - Mobile Native Application | Augmented Reality
 
 ## Introduction
-Traverse Windsor is a cross-platform mobile application which uses Augmented Reality allowing users to locate the nearby places in the view of their mobile's cameras. The application is a one-stop-shop for all the happenings in Windsor and what places are trending at the moment. The users can also add any public events for all the residents and tourists. The users can view these events and either like or RSVP to any particular event.
+Traverse Windsor is a cross-platform mobile application which uses Augmented Reality allowing users to locate the nearby places in the view of their mobiles' cameras. The application is a one-stop-shop for all the happenings in Windsor and what places are trending at the moment. The users can also add any public events for all the residents and tourists. The users can view these events and either like or RSVP to any particular event.
 
 ### Features Used
 The functional features of the application are as follows:
@@ -84,8 +84,19 @@ $ npm install aws-sdk
 
 - Set up the Viro React library for the Augmented Reality Feature for the application by using the prereqisite link for Viro React CLI.
 
-### Step 6 - Running the Application
+### Step 6 - Additional Setup
 
+- The application requires a Google Maps Places API key: Get this from the Google Cloud Platform (Even if it is a paid API, Google gives $300 credits).
+
+- After getting the key, set it on the API_KEY constant on Camera.js line 28.
+
+### Step 7 - Running the Application
+
+- Before executing the application, it is best to run the following command to remove any dependancies related issues:
+
+```
+$ npm install
+```
 - Enable the USB Debugging for Android.
 
 - Android Device > System Settings > Developer options > USB debugging.
